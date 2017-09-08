@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>用户注册</title>
+		<link rel="stylesheet" type="text/css" href="register.css" />
+	</head>
+	
+	<body>
+		<form action="user_register.php" method="post">
+			<table>
+				<tr>
+					<td>用户名</td>
+					<td><input type="text" class="text_input" name="userName" /></td>
+				</tr>
+				<tr>
+					<td>手机号</td>
+					<td>
+						<input type="text" class="text_input" name="phone" /></td>
+				</tr>
+				<tr>
+					<td>验证码</td>
+					<td><input type="text" class="text_input" name="verifyCode" /></td>
+					<td><a href=""><img name="code" src="code.php"></a></td>
+				</tr>
+				<tr>
+					<td>密码</td>
+					<td><input type="password" class="text_input" name="password" /></td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>
+						<input type="checkbox" name="isAgree" /> 使用协议..
+					</td>
+				</tr>
+				
+				<tr>
+					<td>&nbsp;</td>
+					<td><input type="submit" class="submit_btn" value="注册" /></td>
+				</tr>
+			</table>
+		</form>
+		<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+		<script type="text/javascript">
+			$(".code").click(function(){
+				var src="code.php?t=" + Math.random();
+				$(".code img").attr('src',src);
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<div class="middle">
+		<div class="nav clearfix">
+			<ul>
+			<?php foreach($new_types as $key=>$type):?>
+				<?php if($type['selected']):?>
+				<li class="on"><a href="#"><?php echo $type['type'];?> </a></li>
+				<li><span>/</span></li>
+				<?php else:?>
+				<li><a href="#"><?php echo $type['type'];?> </a></li>
+				<li><span>/</span></li>
+				<?php endif?>
+			<?php endforeach;?>
+			</ul>
+			<div class="location">
+				<a href="index.html">首页</a>
+				|
+				<a href="news.html">新闻中心</a>
+				
+			</div>
+			<a href="index.html">
+				<img src="img/logo1.png">
+			</a>
+		</div>

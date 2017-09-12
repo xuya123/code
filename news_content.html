@@ -1,0 +1,24 @@
+<div class="list">
+			<ul>
+			<?php foreach($news as $key=>$type):?>
+				<?php if($key<3):?>
+				<li class="clearfix">
+					<a href="news_details.html"><img src="<?php echo $type['img']?>"></a>
+					<div class="date">
+						<p><span>01</span></p>
+						<p>-2017-2-17</p>
+					</div>
+					<div class="content">
+						<h3><a href="news_details.html"><?php echo $type['title'];?></a></h3>
+						<p><?php echo $type['content'];?></p>
+					</div>
+					<div class="more">
+						<a href="news_details.html">
+								more
+						</a>
+					</div>
+				</li>
+				<?php endif;?>
+			<?php endforeach;?>
+			</ul>
+		</div>
